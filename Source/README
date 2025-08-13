@@ -1,0 +1,85 @@
+Resume Screening
+
+•	Overview:
+The Resume Screening is a Python-based project that connects to a MySQL database, filters resumes based on user-defined skills and education, ranks candidates according to predefined required skills, and exports the results to a CSV file.
+
+•	Features:
+- Connects to MySQL database to fetch stored resumes.
+- Filters resumes by user-input skills and education.
+- Ranks candidates based on the number of matching required skills.
+- Exports the filtered & ranked results to a CSV file.
+- Handles "No match found" gracefully.
+
+•	Technologies Used:
+- Python (Data Processing)
+- MySQL (Database)
+- CSV Module (Exporting results)
+
+•	Project Structure:
+Resume_Screening
+-main.py   # Main script for filtering & ranking
+- resumes_output.csv    # All resumes (exported)
+- filtered_ranked_resumes.csv    # Filtered & ranked resumes
+- README     # Project documentation
+
+•	How It Works
+
+1. The script connects to your MySQL database containing resumes.
+2. User enters skill and education to search for.
+3. Script fetches matching resumes from the database.
+4. Candidates are ranked based on required skills (Python, SQL, Data Analysis).
+5. Results are exported to filtered_ranked_resumes.csv.
+
+
+
+
+•	Usage:
+
+1. Install Requirements
+pip install mysql-connector-python
+
+2. Run the Script
+python main.py
+
+3. Enter Filters when prompted:
+Enter skill to search: Python
+Enter education to search: B.Sc in Computer Science
+
+4. Check Output
+- filtered_ranked_resumes.csv will have the ranked candidates.
+
+
+•	Database Schema:
+
+Column	Type
+id	INT
+name	VARCAHR
+email	VARCHAR
+phone	VARCHAR
+education	TEXT
+skills	TEXT
+
+
+•	Example Output:
+
+User Input:
+
+Skill: Python
+Education: B.Sc in Computer Science
+Name	Email	Phone	Education	Skills	Score
+John Doe	john@example.com
+1234567890	B.Sc in Computer Science	Python, SQL, Data Analysis	3
+Jane Smith	jane@example.com
+9876543210	B.Sc in Computer Science	Python, Excel	1
+CSV Output: 
+
+
+
+•	Future Improvements:
+•	Add a GUI for non-technical users.
+•	Integrate with Power BI / Tableau for visualization.
+•	Include resume parsing from PDF files directly.
+
+
+
+
